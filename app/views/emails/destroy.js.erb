@@ -1,0 +1,4 @@
+document.querySelector("section").innerHTML = ""
+
+var deletedEmail = document.querySelector("a[href='/emails/<%= @email.id %>']").parentNode.parentNode
+deletedEmail.style.display = "none";
