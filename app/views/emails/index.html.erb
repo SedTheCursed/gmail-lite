@@ -1,2 +1,28 @@
-<h1>Emails#index</h1>
-<p>Find me in app/views/emails/index.html.erb</p>
+<main class="container-fluid">
+    <div class="row">
+        <aside class="col-md-3">
+            <h2>E-mail reçus</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>
+                            <a
+                                href="<%= emails_path %>"
+                                data-method="POST"
+                                data-remote>
+                                <button class="btn btn-info">Recevoir un email</button>
+                            </a>
+                        </th>
+                    </tr>
+                <thead>
+                <tbody>
+                    <% @emails.each do |email| %>
+                    <%= render 'list_email', email: email %>
+                    <% end %>
+                </tbody>
+            </table>
+        </aside>
+        <section class="col-md-9">
+        </section>
+    </div>
+</main>

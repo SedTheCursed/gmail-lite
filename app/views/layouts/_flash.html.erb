@@ -1,2 +1,11 @@
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
+<% if (notice)
+    alert_type = "success"
+elsif (alert)
+    alert_type = "danger"
+end %>
+
+<% if alert_type %>
+    <div class="alert alert-<%= alert_type %> alert-dismissible fade show" role="alert">
+    <%= (notice) ? notice : alert %>
+    </div>
+<% end %>

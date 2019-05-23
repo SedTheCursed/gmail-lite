@@ -1,3 +1,32 @@
 // Place all the styles related to the emails controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+aside, section {min-height: 100vh;}
+
+h2
+{
+    color: var(--primary);
+}
+
+aside
+{
+    border-right: grey 2px solid
+}
+
+aside table, aside tr, aside td
+{
+    width: 100%;
+}
+
+aside>table>tbody>tr>td
+{
+    margin: 0 20px;
+    padding: 20px;
+    border-bottom: 1px solid grey;
+    width: 100%;
+}
+
+a, a:hover, a:focus, a:visited
+{
+    color: black;
+}
