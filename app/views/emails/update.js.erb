@@ -1,1 +1,7 @@
-document.querySelector("a[href='/emails/<%= @email.id %>']").parentNode.parentNode.classList.add("unread")
+<% if !@email.read %>
+    document.querySelector("a[href='/emails/<%= @email.id %>']").parentNode.parentNode.classList.add("unread")
+    document.querySelector("button.btn-warning").innerText = "Marquer comme lu"
+<% else%>
+    document.querySelector("a[href='/emails/<%= @email.id %>']").parentNode.parentNode.classList.remove("unread")
+    document.querySelector("button.btn-warning").innerText = "Marquer comme non-lu"
+<% end %>
