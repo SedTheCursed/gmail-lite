@@ -1,3 +1,8 @@
-<tr>
-    <td><a href="<%= email_path(email.id) %>" data-remote><%= email.object %></a></td>
+<tr <%= 'class=unread' unless email.read %>>
+    <td><a
+        href="<%= email_path(email.id) %>"      
+        data-remote>
+        <%= email.object %>
+        </a>
+    </td>
 </tr>
