@@ -1,4 +1,4 @@
-<tr <%= 'class=unread' unless email.read %>>
+<tr <%= 'class=unread' unless email.read %> data-remote data-url="<%= email_path(email.id) %>" >
     <td><a
         href="<%= email_path(email.id) %>"      
         data-remote>
