@@ -1,0 +1,3 @@
+var section = document.querySelector("section")
+section.innerHTML = ""
+section.insertAdjacentHTML("afterBegin", "<%= j render "email", email: @email %>")
